@@ -1,7 +1,8 @@
-Ferramenta utilizada para automação de testes
+####### Ferramenta utilizada para automação de testes
   Robot Framework
 
-Pré requisitos para execução
+
+####### Pré requisitos para execução
 
 Instalação do Python pip 3
 Instalação do robotframework
@@ -9,23 +10,23 @@ Instalação das librarys
 
 
 
-APós instalar o python, faça a instalação das librarys
+####### APós instalar o python, faça a instalação das librarys
 
 pip install robotframework
 pip install robotframework-seleniumLibrary
 pip install robotframework-requestLibrary
 
 
-Para execução dos testes web 
+####### Para execução dos testes web 
 
 Após clonar o projeto, acesse a pasta robot/tests e execute o comando robot --outputdir ./results Case-Vox.robot
 
 
-Para execução dos testes api
+####### Para execução dos testes api
 
 Após clonar o projeto, acesse a pasta robot/tests e execute o comando robot --outputdir ./results testeAPI.robot
 
 
-O relatório da execução estará disponível na pasta results, basta abrir o arquivo html
+####### O relatório da execução estará disponível na pasta results, basta abrir o arquivo html
 
 ![image](https://github.com/arontnascimento/CaseVox/assets/174741611/1eb02d97-3ed9-4cb8-a75f-3c6390e139eb)

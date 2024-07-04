@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240704 16:15:10.771" rpa="false" schemaversion="4">
+<suite id="s1" name="Case-Vox" source="/home/aron.nascimento/robot/tests/Case-Vox.robot">
+<test id="s1-t1" name="Acessar webPage e interagir com elementos" line="10">
+<kw name="Start Application" library="keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://the-internet.herokuapp.com/challenging_dom</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240704 16:15:10.903" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/challenging_dom'.</msg>
+<status status="PASS" starttime="20240704 16:15:10.902" endtime="20240704 16:15:14.306"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240704 16:15:14.307" endtime="20240704 16:15:14.413"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:10.902" endtime="20240704 16:15:14.413"/>
+</kw>
+<kw name="Dado que estou na tela Challenging DOM" library="keywords" sourcename="Dado que estou na tela ${page}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>Então A aplicação apresenta o texto</arg>
+<arg>${page}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Então A aplicação apresenta o texto" library="keywords">
+<arg>${page}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${texto}</arg>
+<arg>20</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240704 16:15:14.420" endtime="20240704 16:15:14.450"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:14.416" endtime="20240704 16:15:14.450"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:14.415" endtime="20240704 16:15:14.450"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:14.414" endtime="20240704 16:15:14.450"/>
+</kw>
+<kw name="Quando clico no elemento" library="keywords">
+<arg>button</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:16.451" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:14.451" endtime="20240704 16:15:16.452"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[@class='${elemento}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:16.455" level="INFO">Clicking element '//a[@class='button']'.</msg>
+<status status="PASS" starttime="20240704 16:15:16.452" endtime="20240704 16:15:16.934"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:17.143" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:16.934" endtime="20240704 16:15:17.144"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:14.450" endtime="20240704 16:15:17.144"/>
+</kw>
+<kw name="Quando clico no elemento" library="keywords">
+<arg>button alert</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:19.145" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:17.144" endtime="20240704 16:15:19.145"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[@class='${elemento}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:19.148" level="INFO">Clicking element '//a[@class='button alert']'.</msg>
+<status status="PASS" starttime="20240704 16:15:19.146" endtime="20240704 16:15:19.464"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:19.670" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:19.464" endtime="20240704 16:15:19.670"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:17.144" endtime="20240704 16:15:19.670"/>
+</kw>
+<kw name="Quando clico no elemento" library="keywords">
+<arg>button success</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:21.672" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:19.671" endtime="20240704 16:15:21.672"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[@class='${elemento}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:21.675" level="INFO">Clicking element '//a[@class='button success']'.</msg>
+<status status="PASS" starttime="20240704 16:15:21.673" endtime="20240704 16:15:22.033"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:22.228" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:22.033" endtime="20240704 16:15:22.228"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:19.670" endtime="20240704 16:15:22.229"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum0</arg>
+<arg>edit</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:24.230" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:22.229" endtime="20240704 16:15:24.230"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:24.233" level="INFO">Clicking element '//td[text()='Phaedrum0']/parent::tr/td/a[text()='edit']'.</msg>
+<status status="PASS" starttime="20240704 16:15:24.231" endtime="20240704 16:15:24.311"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:24.483" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:24.312" endtime="20240704 16:15:24.483"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:22.229" endtime="20240704 16:15:24.483"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum0</arg>
+<arg>delete</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:26.485" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:24.484" endtime="20240704 16:15:26.485"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:26.488" level="INFO">Clicking element '//td[text()='Phaedrum0']/parent::tr/td/a[text()='delete']'.</msg>
+<status status="PASS" starttime="20240704 16:15:26.486" endtime="20240704 16:15:26.574"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:26.785" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:26.574" endtime="20240704 16:15:26.786"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:24.484" endtime="20240704 16:15:26.786"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum1</arg>
+<arg>edit</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:28.787" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:26.787" endtime="20240704 16:15:28.788"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:28.790" level="INFO">Clicking element '//td[text()='Phaedrum1']/parent::tr/td/a[text()='edit']'.</msg>
+<status status="PASS" starttime="20240704 16:15:28.788" endtime="20240704 16:15:28.928"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:29.132" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:28.929" endtime="20240704 16:15:29.132"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:26.786" endtime="20240704 16:15:29.133"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum1</arg>
+<arg>delete</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:31.134" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:29.133" endtime="20240704 16:15:31.134"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:31.135" level="INFO">Clicking element '//td[text()='Phaedrum1']/parent::tr/td/a[text()='delete']'.</msg>
+<status status="PASS" starttime="20240704 16:15:31.134" endtime="20240704 16:15:31.187"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:31.382" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:31.187" endtime="20240704 16:15:31.383"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:29.133" endtime="20240704 16:15:31.383"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum2</arg>
+<arg>edit</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:33.384" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:31.384" endtime="20240704 16:15:33.385"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:33.387" level="INFO">Clicking element '//td[text()='Phaedrum2']/parent::tr/td/a[text()='edit']'.</msg>
+<status status="PASS" starttime="20240704 16:15:33.385" endtime="20240704 16:15:33.509"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:33.694" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:33.510" endtime="20240704 16:15:33.694"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:31.383" endtime="20240704 16:15:33.694"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum2</arg>
+<arg>delete</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:35.695" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:33.695" endtime="20240704 16:15:35.696"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:35.698" level="INFO">Clicking element '//td[text()='Phaedrum2']/parent::tr/td/a[text()='delete']'.</msg>
+<status status="PASS" starttime="20240704 16:15:35.696" endtime="20240704 16:15:35.816"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:36.020" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:35.817" endtime="20240704 16:15:36.020"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:33.694" endtime="20240704 16:15:36.020"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum3</arg>
+<arg>edit</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:38.022" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:36.021" endtime="20240704 16:15:38.022"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:38.024" level="INFO">Clicking element '//td[text()='Phaedrum3']/parent::tr/td/a[text()='edit']'.</msg>
+<status status="PASS" starttime="20240704 16:15:38.023" endtime="20240704 16:15:38.106"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:38.312" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:38.106" endtime="20240704 16:15:38.312"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:36.021" endtime="20240704 16:15:38.312"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum3</arg>
+<arg>delete</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:40.313" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:38.313" endtime="20240704 16:15:40.314"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:40.318" level="INFO">Clicking element '//td[text()='Phaedrum3']/parent::tr/td/a[text()='delete']'.</msg>
+<status status="PASS" starttime="20240704 16:15:40.314" endtime="20240704 16:15:40.374"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:40.580" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:40.374" endtime="20240704 16:15:40.580"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:38.312" endtime="20240704 16:15:40.580"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum4</arg>
+<arg>edit</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:42.581" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:40.581" endtime="20240704 16:15:42.582"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:42.584" level="INFO">Clicking element '//td[text()='Phaedrum4']/parent::tr/td/a[text()='edit']'.</msg>
+<status status="PASS" starttime="20240704 16:15:42.582" endtime="20240704 16:15:42.675"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:42.865" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:42.675" endtime="20240704 16:15:42.865"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:40.580" endtime="20240704 16:15:42.865"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum4</arg>
+<arg>delete</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:44.867" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:42.866" endtime="20240704 16:15:44.867"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:44.870" level="INFO">Clicking element '//td[text()='Phaedrum4']/parent::tr/td/a[text()='delete']'.</msg>
+<status status="PASS" starttime="20240704 16:15:44.868" endtime="20240704 16:15:44.952"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:45.154" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:44.953" endtime="20240704 16:15:45.154"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:42.866" endtime="20240704 16:15:45.155"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum5</arg>
+<arg>edit</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:47.156" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:45.155" endtime="20240704 16:15:47.156"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:47.159" level="INFO">Clicking element '//td[text()='Phaedrum5']/parent::tr/td/a[text()='edit']'.</msg>
+<status status="PASS" starttime="20240704 16:15:47.157" endtime="20240704 16:15:47.218"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:47.430" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:47.218" endtime="20240704 16:15:47.430"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:45.155" endtime="20240704 16:15:47.430"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum5</arg>
+<arg>delete</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:49.432" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:47.431" endtime="20240704 16:15:49.432"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:49.435" level="INFO">Clicking element '//td[text()='Phaedrum5']/parent::tr/td/a[text()='delete']'.</msg>
+<status status="PASS" starttime="20240704 16:15:49.433" endtime="20240704 16:15:49.491"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:49.673" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:49.491" endtime="20240704 16:15:49.673"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:47.431" endtime="20240704 16:15:49.673"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum6</arg>
+<arg>edit</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:51.675" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:49.674" endtime="20240704 16:15:51.675"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:51.678" level="INFO">Clicking element '//td[text()='Phaedrum6']/parent::tr/td/a[text()='edit']'.</msg>
+<status status="PASS" starttime="20240704 16:15:51.676" endtime="20240704 16:15:51.747"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:51.934" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:51.747" endtime="20240704 16:15:51.935"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:49.673" endtime="20240704 16:15:51.935"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum6</arg>
+<arg>delete</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:53.936" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:51.936" endtime="20240704 16:15:53.937"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:53.940" level="INFO">Clicking element '//td[text()='Phaedrum6']/parent::tr/td/a[text()='delete']'.</msg>
+<status status="PASS" starttime="20240704 16:15:53.937" endtime="20240704 16:15:54.060"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:54.243" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:54.060" endtime="20240704 16:15:54.243"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:51.935" endtime="20240704 16:15:54.243"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum7</arg>
+<arg>edit</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:56.245" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:54.244" endtime="20240704 16:15:56.245"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:56.248" level="INFO">Clicking element '//td[text()='Phaedrum7']/parent::tr/td/a[text()='edit']'.</msg>
+<status status="PASS" starttime="20240704 16:15:56.246" endtime="20240704 16:15:56.311"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:56.518" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:56.311" endtime="20240704 16:15:56.519"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:54.244" endtime="20240704 16:15:56.519"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum7</arg>
+<arg>delete</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:15:58.520" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:56.519" endtime="20240704 16:15:58.520"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:15:58.523" level="INFO">Clicking element '//td[text()='Phaedrum7']/parent::tr/td/a[text()='delete']'.</msg>
+<status status="PASS" starttime="20240704 16:15:58.521" endtime="20240704 16:15:58.596"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:15:58.775" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:15:58.597" endtime="20240704 16:15:58.775"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:56.519" endtime="20240704 16:15:58.775"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum8</arg>
+<arg>edit</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:16:00.776" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:15:58.776" endtime="20240704 16:16:00.777"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:16:00.779" level="INFO">Clicking element '//td[text()='Phaedrum8']/parent::tr/td/a[text()='edit']'.</msg>
+<status status="PASS" starttime="20240704 16:16:00.777" endtime="20240704 16:16:00.856"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:16:01.045" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:16:00.856" endtime="20240704 16:16:01.045"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:58.775" endtime="20240704 16:16:01.045"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum8</arg>
+<arg>delete</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:16:03.046" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:16:01.046" endtime="20240704 16:16:03.047"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:16:03.049" level="INFO">Clicking element '//td[text()='Phaedrum8']/parent::tr/td/a[text()='delete']'.</msg>
+<status status="PASS" starttime="20240704 16:16:03.047" endtime="20240704 16:16:03.115"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:16:03.306" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:16:03.115" endtime="20240704 16:16:03.307"/>
+</kw>
+<status status="PASS" starttime="20240704 16:16:01.045" endtime="20240704 16:16:03.307"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum9</arg>
+<arg>edit</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:16:05.308" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:16:03.307" endtime="20240704 16:16:05.308"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:16:05.311" level="INFO">Clicking element '//td[text()='Phaedrum9']/parent::tr/td/a[text()='edit']'.</msg>
+<status status="PASS" starttime="20240704 16:16:05.309" endtime="20240704 16:16:05.443"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:16:05.632" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:16:05.443" endtime="20240704 16:16:05.632"/>
+</kw>
+<status status="PASS" starttime="20240704 16:16:03.307" endtime="20240704 16:16:05.632"/>
+</kw>
+<kw name="Quando clico no link da coluna" library="keywords">
+<arg>Phaedrum9</arg>
+<arg>delete</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240704 16:16:07.633" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240704 16:16:05.633" endtime="20240704 16:16:07.634"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${coluna}']/parent::tr/td/a[text()='${link}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240704 16:16:07.636" level="INFO">Clicking element '//td[text()='Phaedrum9']/parent::tr/td/a[text()='delete']'.</msg>
+<status status="PASS" starttime="20240704 16:16:07.634" endtime="20240704 16:16:07.699"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240704 16:16:07.899" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240704 16:16:07.699" endtime="20240704 16:16:07.900"/>
+</kw>
+<status status="PASS" starttime="20240704 16:16:05.632" endtime="20240704 16:16:07.900"/>
+</kw>
+<kw name="Close Application" library="keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240704 16:16:07.901" endtime="20240704 16:16:08.044"/>
+</kw>
+<status status="PASS" starttime="20240704 16:16:07.900" endtime="20240704 16:16:08.044"/>
+</kw>
+<status status="PASS" starttime="20240704 16:15:10.901" endtime="20240704 16:16:08.044"/>
+</test>
+<status status="PASS" starttime="20240704 16:15:10.772" endtime="20240704 16:16:08.045"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Case-Vox">Case-Vox</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

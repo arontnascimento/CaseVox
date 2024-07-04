@@ -14,7 +14,7 @@ Instalação das librarys
 
 pip install robotframework
 pip install robotframework-seleniumLibrary
-pip install robotframework-requestLibrary
+pip install robotframework-requests
 
 
 ####### Para execução dos testes web 

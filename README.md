@@ -32,6 +32,10 @@ Após clonar o projeto, acesse a pasta robot/tests e execute o comando robot --o
 ![image](https://github.com/arontnascimento/CaseVox/assets/174741611/1eb02d97-3ed9-4cb8-a75f-3c6390e139eb)
 
 
+Para executar em modo headless basta alterar no nome do browser chrome para headlesschrome, possibilitando execução dos testes em containers
+
+
+
 Relatório de execução dos testes de API 
 
 ![image](https://github.com/arontnascimento/CaseVox/assets/174741611/29790f36-e208-4a9d-9c8a-74f4a285a041)
